@@ -1,5 +1,5 @@
 import React, { Fragment, useState } from "react";
-import { Outlet } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
@@ -13,17 +13,17 @@ const NavigationContainer = styled.nav`
   
 `;
 
-const NavLink = styled.a`
+const NavLinkDefault = styled(NavLink)`
   text-decoration: none;
   color: white;
   margin-right: 1rem;
 `;
-const NavLinkMobile = styled.a`
+const NavLinkMobile = styled(NavLink)`
   text-decoration: none;
   color: black;
   margin-right: 1rem;
 `;
-const NavLinkHome = styled.a`
+const NavLinkHome = styled(NavLink)`
   text-decoration: none;
   color: white;
   margin-right: 1rem;
@@ -94,29 +94,29 @@ const Navigation = () => {
     <Fragment>
       <NavigationContainer>
         <NavigationDesktop>
-          <NavLink href="/">Home</NavLink>
-          <NavLink href="/about">About</NavLink>
-          <NavLink href="/contact">Contact</NavLink>
-          <NavLink href="/projects">Projects</NavLink>
+          <NavLinkDefault to="/">Home</NavLinkDefault>
+          <NavLinkDefault to="/about">About</NavLinkDefault>
+          <NavLinkDefault to="/contact">Contact</NavLinkDefault>
+          <NavLinkDefault to="/projects">Projects</NavLinkDefault>
         </NavigationDesktop>
         <MenuButton onClick={toggleMenu}>
           ☰
         </MenuButton>
       
-        <NavLinkHome href="/">Home</NavLinkHome>
+        <NavLinkHome to="/">Home</NavLinkHome>
       </NavigationContainer>
       <MobileMenu open={isMenuOpen}>
       <MenuItem>
-          <NavLinkMobile href="/" onClick={() => {setIsMenuOpen(false)}}>Home</NavLinkMobile>
+          <NavLinkMobile to="/" onClick={() => {setIsMenuOpen(false)}}>Home</NavLinkMobile>
         </MenuItem>
       <MenuItem>
-          <NavLinkMobile href="/about" onClick={() => {setIsMenuOpen(false)}}>About</NavLinkMobile>
+          <NavLinkMobile to="/about" onClick={() => {setIsMenuOpen(false)}}>About</NavLinkMobile>
         </MenuItem>
         <MenuItem>
-          <NavLinkMobile href="/projects" onClick={() => {setIsMenuOpen(false)}}>Projects</NavLinkMobile>
+          <NavLinkMobile to="/projects" onClick={() => {setIsMenuOpen(false)}}>Projects</NavLinkMobile>
         </MenuItem>
         <MenuItem>
-          <NavLinkMobile href="/contact" onClick={() => {setIsMenuOpen(false)}}>Contact</NavLinkMobile>
+          <NavLinkMobile to="/contact" onClick={() => {setIsMenuOpen(false)}}>Contact</NavLinkMobile>
         </MenuItem>
       </MobileMenu>
       <Outlet />

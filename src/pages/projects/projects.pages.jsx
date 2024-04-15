@@ -6,49 +6,49 @@ const projects = [
       id: 1,
       name: "Weather Recommendation",
       description: "A website that recommends movies to users based on the current weather. The technology used includes Node.js, Firebase, MongoDB, and Bootstrap.",
-      imageUrl: "src/assets/apiproject1.png",
+      imageUrl: "/apiproject1.png",
       externalLink:'https://github.com/BishalBanstola/web-design-project-api/upload'
     },
     {
       id: 2,
       name: "Calorie Tracker",
       description: "A web app enabling users to set calorie goals and track their intake. Implemented with HTML, CSS, and JavaScript.",
-      imageUrl: "src/assets/calorie-tracker.png",
+      imageUrl: "/calorie-tracker.png",
       externalLink:'https://github.com/BishalBanstola/calorie-tracker'
     },
     {
       id: 3,
       name: "Flashcards App",
       description: "A web app for language learning through flashcards, built with React, Redux, and Firebase.",
-      imageUrl: "src/assets/flashcards.png",
+      imageUrl: "/flashcards.png",
       externalLink:'https://github.com/BishalBanstola/flashcard',
     },
     {
       id: 4,
       name: "Toxicity",
       description: "A web app allowing users to assess text toxicity. Developed using React and TensorFlow.",
-      imageUrl: "src/assets/toxicity.png",
+      imageUrl: "/toxicity.png",
       externalLink:'https://github.com/BishalBanstola/toxicity/upload'
     },
     {
       id: 5,
       name: "TopNews",
       description: "A web app where users can subscribe to various news categories. Developed using HTML, CSS, and JavaScript.",
-      imageUrl: "src/assets/topnews.png",
+      imageUrl: "/topnews.png",
       externalLink:'https://bishalbanstola.github.io/web-application-programming-project1/'
     },
     {
       id: 6,
       name: "Foodmandu",
       description: "An online food ordering website serving Pokhara and Kathmandu in Nepal. Implemented with React, Node.js, SQL, and Java.",
-      imageUrl: "src/assets/foodmandu.png",
+      imageUrl: "/foodmandu.png",
       externalLink:'https://wwww.foodmandu.com'
     },
     {
       id: 7,
       name: "NepMeds",
       description: "An online pharmacy store based in Nepal. Implemented with technologies such as Java, Spring Boot, and MySQL.",
-      imageUrl: "src/assets/pharmacy.png",
+      imageUrl: "/pharmacy.png",
       externalLink:'https://www.nepmeds.com.np'
     },
   ];
