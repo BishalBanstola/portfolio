@@ -14,7 +14,7 @@ const Container = styled.div`
 
 const Form = styled.form`
   width: 400px;
-  padding: 20px;
+  padding: 40px;
   background-color: #f9f9f9;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -101,7 +101,7 @@ export const Contact = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          Contact Me
+          Feel free to contact me. 
         </Title>
         {submitted ? (
           <SuccessMessage>Your message has been sent successfully!</SuccessMessage>

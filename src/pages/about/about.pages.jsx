@@ -22,25 +22,24 @@ const ContentWrapper = styled.div`
 
 const Title = styled(motion.h1)`
   font-size: 3rem;
-  margin-bottom: 2px;
+  margin: 10px 0;
 `;
 
 const Paragraph = styled(motion.p)`
   font-size: 1.2rem;
-  margin-bottom: 20px;
   margin-top:0;
+  font-weight: 400;
   line-height:1.5;
 `;
 
 const SkillsList = styled.ul`
   list-style-type: none;
   padding: 0;
-  margin:0;
+  margin-bottom:30px;
 `;
 
 const SkillItem = styled.li`
   font-size: 1.1rem;
-  margin-bottom: 10px;
   margin:0;
 `;
 
@@ -66,13 +65,13 @@ export const About = () => {
           Firebase, and MongoDB, along with expertise in machine learning and
           data analytics.
         </Paragraph>
-        <Paragraph
+        <Title
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
-          <Title>SKILLS</Title>
-        </Paragraph>
+         SKILLS
+        </Title>
         <SkillsList>
           <SkillItem
             initial={{ opacity: 0, y: 50 }}
@@ -83,13 +82,13 @@ export const About = () => {
             machine learning, data analytics
           </SkillItem>
         </SkillsList>
-        <Paragraph
+        <Title
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.8 }}
         >
-          <Title>BACKGROUND</Title>
-        </Paragraph>
+          BACKGROUND
+        </Title>
         <Paragraph
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}

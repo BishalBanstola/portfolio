@@ -40,14 +40,14 @@ const projects = [
     {
       id: 6,
       name: "Foodmandu",
-      description: "An online food ordering website serving Pokhara and Kathmandu in Nepal. Implemented with React, Node.js, SQL, and Java.",
+      description: "An online food ordering website serving Pokhara and Kathmandu in Nepal. I worked on this project while I was employed as a full stack developer.",
       imageUrl: "/foodmandu.png",
       externalLink:'https://wwww.foodmandu.com'
     },
     {
       id: 7,
       name: "NepMeds",
-      description: "An online pharmacy store based in Nepal. Implemented with technologies such as Java, Spring Boot, and MySQL.",
+      description: "An online pharmacy store based in Nepal. I was involved in this project while working as a front-end developer.",
       imageUrl: "/pharmacy.png",
       externalLink:'https://www.nepmeds.com.np'
     },

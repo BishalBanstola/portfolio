@@ -132,7 +132,7 @@ export const Home = () => {
             Contact
           </Button>
           <Button
-            color="#ffc107"
+            color="#ff7675"
             hoverColor="#d39e00"
             activeColor="#0056b3"
             to="/projects"

@@ -16,6 +16,7 @@ const NavigationContainer = styled.nav`
 const NavLinkDefault = styled(NavLink)`
   text-decoration: none;
   color: white;
+  font-size:1.2em;
   margin-right: 1rem;
 `;
 const NavLinkMobile = styled(NavLink)`
@@ -33,7 +34,7 @@ const NavLinkHome = styled(NavLink)`
 `;
 
 const NavigationDesktop = styled.div`
-  
+margin-left: 50px;
   @media (max-width: 769px) {
     display: none; /* Hidden on desktop */
   }
@@ -77,6 +78,30 @@ const MenuItem = styled.div`
     border-bottom: none;
   }
 `;
+const Button = styled(NavLink)`
+  padding: 8px 18px;
+  font-size: 1.2rem;
+  background-color: ${props => props.color || "#ff7675"};
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration:none;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: ${props => props.hoverColor || "#0056b3"};
+  }
+
+  &.active {
+    background-color: ${props => props.activeColor || "#0056b3"};
+  }
+
+  @media (max-width: 768px) {
+    display:none;
+    margin-bottom: 10px;
+  }
+`;
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -97,12 +122,12 @@ const Navigation = () => {
           <NavLinkDefault to="/">Home</NavLinkDefault>
           <NavLinkDefault to="/about">About</NavLinkDefault>
           <NavLinkDefault to="/contact">Contact</NavLinkDefault>
-          <NavLinkDefault to="/projects">Projects</NavLinkDefault>
+        
         </NavigationDesktop>
         <MenuButton onClick={toggleMenu}>
           ☰
         </MenuButton>
-      
+        <Button to="/projects">Projects</Button>
         <NavLinkHome to="/">Home</NavLinkHome>
       </NavigationContainer>
       <MobileMenu open={isMenuOpen}>
