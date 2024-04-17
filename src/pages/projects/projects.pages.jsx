@@ -2,6 +2,13 @@ import React from "react";
 import styled from "styled-components";
 import {motion} from 'framer-motion';
 const projects = [
+  {
+    id: 0,
+    name: "Promise Tracker",
+    description: "A website that allows users to track promises they've made, whether they are personal commitments or promises made by leaders and politicians. The technology used includes Node.js, SQLite, React.js",
+    imageUrl: "/promise-tracker.png",
+    externalLink:'https://github.com/BishalBanstola/promise-tracker/tree/main'
+  },
     {
       id: 1,
       name: "Weather Recommendation",
