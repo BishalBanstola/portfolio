@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import styled from "styled-components";
 import {motion} from 'framer-motion';
 const projects = [
@@ -106,8 +106,45 @@ const HorizontalLine = styled.hr`
   margin: 1px auto;
 `;
 
+const ModalBackdrop = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const ModalContent = styled.div`
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+`;
+
+const ModalImage = styled.img`
+  width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+`;
+
+
 export const ProjectPage = () => {
+  const [showModal, setShowModal] = useState(false);
+  const [modalImageUrl, setModalImageUrl] = useState("");
+
+  const openModal = (imageUrl) => {
+    setModalImageUrl(imageUrl);
+    setShowModal(true);
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+  };
   return (
+    <>
     <Container>
         <TitleWrapper>
         <Title
@@ -120,7 +157,7 @@ export const ProjectPage = () => {
       </TitleWrapper>
       {projects.map((project) => (
         <Card key={project.id}>
-          <Image src={project.imageUrl} alt={project.name} />
+          <Image src={project.imageUrl} alt={project.name} onClick={() => openModal(project.imageUrl)} />
           <HorizontalLine />
           <Content>
             <Title><a href={project.externalLink} target="_blank" rel="noopener noreferrer" style={{textDecoration:'none'}}>{project.name}</a></Title>
@@ -129,6 +166,14 @@ export const ProjectPage = () => {
         </Card>
       ))}
     </Container>
+     {showModal && (
+      <ModalBackdrop onClick={closeModal}>
+        <ModalContent>
+          <ModalImage src={modalImageUrl} alt="Full Screen Image" />
+        </ModalContent>
+      </ModalBackdrop>
+    )}
+    </>
   );
 };
 
